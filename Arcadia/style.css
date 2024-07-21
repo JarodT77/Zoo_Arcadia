@@ -1,0 +1,242 @@
+header {
+    background: url('Headerpics.jpg') no-repeat center center/cover;
+    padding: 1rem;
+  }
+  body {
+    background-color: rgb(25, 31, 31);
+    color: white;
+    font-family: Josefin Sans;
+  }
+.header_logo {
+    width: 200px;
+    height: auto;
+}
+
+    .nav {
+        display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .nav {
+        margin-left: auto;
+    }
+
+    .nav-item {
+        margin-left: 1rem;
+        font-size: 25px;
+    }
+    
+    .nav-link {
+        color: white; /* Change la couleur de la police */
+        text-decoration: none;
+    }
+
+main {
+    color: rgb(255, 230, 230);
+    margin: 50px;
+}
+
+.container {
+    display: grid;
+    flex-direction: column;
+    place-items: center; 
+    height: auto;
+}
+
+
+.content {
+    display: flex;
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+.font-yellow {
+    color:rgb(160, 160, 40);
+}
+
+.content-button {
+    background-color: rgb(160, 160, 40); /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordures arrondies */
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centrer le bouton horizontalement */
+    margin-top: 10px; /* Espace au-dessus du bouton */
+  }
+  
+  .rounded-circle {
+    width: 200px; /* Taille de l'image en cercle */
+    height: 200px;
+    object-fit: cover; /* Assure que l'image couvre toute la zone sans déformer */
+  }
+
+
+  .avis-section {
+    background-color:rgb(160, 160, 40); ;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+
+.side-item {
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+.side-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.user {
+    margin-left: 2rem;
+    color: black;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: white;
+    padding: 30px;
+
+}
+
+.large-textarea {
+    width: 350px;
+  
+     /* Adjust height as needed */
+}
+
+.carousel-item {
+    background-color: rgb(160, 160, 40);
+    padding: 20px;
+    border-radius: 10px;
+}
+.header_logo {
+    height: 50px; /* Ajustez la taille selon vos besoins */
+  }
+  
+  .nav-link {
+    color: white;
+  }
+  
+  .nav-link:hover {
+    color: yellow; /* Couleur de survol */
+  }
+  
+  .navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+
+  /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+
+/* Ajoutez des marges en haut et en bas pour l'espace entre les éléments */
+
+.centered-text {
+    text-align: center;
+}
+
+.img-large {
+    width: 100%; /* Par défaut, occupe toute la largeur du conteneur */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+}
+
+@media (min-width: 992px) { /* Écrans d'ordinateur (large) et plus grands */
+    .img-large {
+        max-width: 80%; /* Ajustez selon vos besoins */
+    }
+}
+/* style.css */
+
+.img-container {
+    width: 100%;
+    height: 200px; /* Définir une hauteur fixe pour toutes les images */
+    overflow: hidden; /* Masquer les parties de l'image qui dépassent */
+    display: flex; /* Utiliser flex pour centrer l'image */
+    align-items: center; /* Aligner verticalement */
+    justify-content: center; /* Aligner horizontalement */
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* style.css */
+
+/* Classe personnalisée pour le carrousel */
+.custom-carousel {
+    max-width: 100%;
+    width: 100%;
+    /* Hauteur par défaut du carrousel, ajustez selon vos besoins */
+}
+
+.carousel-inner {
+    height: auto;
+    width: 100%/* Centre verticalement le contenu du carrousel */
+}
+
+.carousel-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-item h5, .carousel-item p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem; /* Augmente la taille du texte */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+   
+    .carousel-item h5, .carousel-item p {
+        font-size : 1rem; /* Réduit la taille du texte sur les petits écrans */
+    }
+}
+
+
+/* Styles pour le formulaire */
+.form-control {
+    font-size: 1.1rem; /* Augmente la taille des champs du formulaire */
+}
+
+.btn-primary {
+    font-size: 1.1rem; /* Augmente la taille du bouton */
+}
+
+/* style.css */
+
+/* style.css */
+
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.animal {
+    width: 300px;
+}
+
