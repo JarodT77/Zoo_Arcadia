@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+include(__DIR__ . '/../config.php');
+
 $message="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

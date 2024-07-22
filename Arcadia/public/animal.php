@@ -1,8 +1,8 @@
 <?php
-include('../arcadia/utilisateur/config.php');
+include(__DIR__ . '/../config.php');
 include('header.html'); 
 
-require 'vendor/autoload.php'; // Inclusion de Composer autoload
+require 'C:/xampp/htdocs/Arcadia/vendor/autoload.php';
 
 use MongoDB\Client;
 
@@ -63,7 +63,7 @@ $animals = $stmt->fetchAll();
 <body>
     <div class="container mt-5">
         <h2>Habitat: <?php echo htmlspecialchars($habitat['nom']); ?></h2>
-        <img src="../arcadia/utilisateur/upload/<?php echo htmlspecialchars($habitat['image']); ?>" class="img-fluid mb-4 animal" alt="<?php echo htmlspecialchars($habitat['nom']); ?>">
+        <img src="../utilisateur/upload/<?php echo htmlspecialchars($habitat['image']); ?>" class="img-fluid mb-4 animal" alt="<?php echo htmlspecialchars($habitat['nom']); ?>">
         <p><?php echo htmlspecialchars($habitat['discribe']); ?></p>
         <div class="d-flex justify-content-center mb-4">
             <a href="habitat_page.php" class="content-button">Retour aux habitats</a>
@@ -78,7 +78,7 @@ $animals = $stmt->fetchAll();
             ?>
                 <div class="col">
                     <div class="card mb-4 h-100 animal-card" data-animal-name="<?php echo $animalName; ?>" style="background-color: rgba(255, 255, 255, 0.1);">
-                        <img src="../arcadia/utilisateur/upload/<?php echo htmlspecialchars_decode($animal['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars_decode($animal['prenom']); ?>">
+                        <img src="../utilisateur/upload/<?php echo htmlspecialchars_decode($animal['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars_decode($animal['prenom']); ?>">
                         <div class="card-body">
                             <h5 class="card-title text-center font-yellow"><?php echo $animalName; ?></h5>
                             <p class="card-text text-center" style="color: white">Race: <?php echo htmlspecialchars_decode($animal['race']); ?></p>
@@ -112,7 +112,7 @@ $animals = $stmt->fetchAll();
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/animal.js"></script> <!-- Inclusion du fichier JavaScript externe -->
+    <script src="../js/animal.js"></script> <!-- Inclusion du fichier JavaScript externe -->
 </body>
 </html>
 

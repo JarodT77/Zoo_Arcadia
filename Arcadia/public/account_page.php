@@ -1,13 +1,13 @@
-<?php 
+<?php
 session_start(); // Inclusion de l'en-tête commun à toutes les pages
- 
-  include('../arcadia/utilisateur/config.php');
 
+include(__DIR__ . '/../config.php');
 
 if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    if($email != "" && $password != ""){
+    
+    if ($email != "" && $password != "") {
         // Utiliser des requêtes préparées pour éviter les injections SQL
         $req = $bdd->prepare("SELECT * FROM utilisateurs WHERE email = :email AND password = :password");
         $req->bindParam(':email', $email);
@@ -15,20 +15,26 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         $req->execute();
         $user = $req->fetch();
 
+        if ($user) {
             // Récupération des permissions associées au rôle de l'utilisateur
             $stmt = $bdd->prepare("SELECT p.name FROM permissions p WHERE p.role_id = :role_id");
             $stmt->execute(['role_id' => $user['role_id']]);
             $_SESSION['permissions'] = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
             // Redirection vers l'interface utilisateur sécurisée
-            header('Location: interface.php');
+            header('Location: ../utilisateur/interface.php');
             exit();
         } else {
+            // Affichage d'un message d'erreur si les informations de connexion sont incorrectes
             echo "Identifiant ou mot de passe incorrect";
         }
-    } 
+    } else {
+        echo "Veuillez remplir tous les champs";
+    }
+}
+?>
 
-
+<?php
 include('header.html'); // Inclusion de l'en-tête commun à toutes les pages
 ?> 
  <div class="container">

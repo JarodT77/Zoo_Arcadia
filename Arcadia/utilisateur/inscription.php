@@ -1,5 +1,6 @@
 <?php
-include('../arcadia/utilisateur/config.php');
+include(__DIR__ . '/../config.php');
+
 
 $stmt = $bdd->query("SELECT id, label FROM role");
 $roles = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -15,7 +16,7 @@ $roles = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container">
@@ -36,7 +37,7 @@ $roles = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <br>
         <input type="submit" value="m'inscrire" name="ok">
         <?php
-include('../arcadia/utilisateur/config.php');
+include('../config.php');
 
 if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = htmlspecialchars($_POST['email']);

@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+include(__DIR__ . '/../config.php');
+
 
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);

@@ -1,5 +1,6 @@
 <?php
-include('../arcadia/utilisateur/config.php');
+include(__DIR__ . '/../config.php');
+
 $message ="";
 
 if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER['REQUEST_METHOD'] == 'POST') {

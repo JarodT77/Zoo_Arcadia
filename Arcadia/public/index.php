@@ -1,5 +1,6 @@
 <?php
-include('../arcadia/utilisateur/config.php');
+include(__DIR__ . '/../config.php');
+
 include('header.html');
 $message = "";
 
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container mt-5 content">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 d-flex justify-content-center mb-4 mb-md-0">
-          <img src="images/lion.jpg" alt="Image Description" class="img-fluid img-large">
+          <img src="../images/lion.jpg" alt="Image Description" class="img-fluid img-large">
         </div>
         <div class="col-12 col-md-6">
           <div class="content-text">
@@ -46,17 +47,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container mt-5">
   <div class="row text-center"> <!-- Ajout de text-center pour centrer le texte et les images -->
     <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-        <img src="images/Elephant.jpg" class="rounded-circle img-fluid mb-3" alt="Image 1">
+        <img src="../images/Elephant.jpg" class="rounded-circle img-fluid mb-3" alt="Image 1">
         <h2 class="font-yellow">La jungle</h2>
         <p class="mt-3">Rencontrez les géants doux et apprenez-en plus sur leurs habitudes fascinantes.</p>
     </div>
     <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-        <img src="images/crocodile.jpg" class="rounded-circle img-fluid mb-3" alt="Image 2">
+        <img src="../images/crocodile.jpg" class="rounded-circle img-fluid mb-3" alt="Image 2">
         <h2 class="font-yellow">Le marais</h2>
         <p class="mt-3">Frissonnez devant les prédateurs redoutables</p>
     </div>
     <div class="col-md-4 d-flex flex-column align-items-center mb-4">
-        <img src="images/zebre.jpg" class="rounded-circle img-fluid mb-3" alt="Image 3">
+        <img src="../images/zebre.jpg" class="rounded-circle img-fluid mb-3" alt="Image 3">
         <h2 class="font-yellow">La savane</h2>
         <p class="mt-3">Observez la savane dans toute sa majesté</p>
     </div>
@@ -73,21 +74,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="row text-center">
         <div class="col-md-4 d-flex flex-column align-items-center mb-4">
             <div class="img-container">
-                <img src="images/restaurant.jpg" class="img-fluid" alt="Image 1">
+                <img src="../images/restaurant.jpg" class="img-fluid" alt="Image 1">
             </div>
             <h2 class="font-yellow">Restaurant</h2>
             <p class="mt-3">Venez manger dans notre restaurant du park ayant une vue sur les animaux.</p>
         </div>
         <div class="col-md-4 d-flex flex-column align-items-center mb-4">
             <div class="img-container">
-                <img src="images/train.jpg" class="img-fluid" alt="Image 2">
+                <img src="../images/train.jpg" class="img-fluid" alt="Image 2">
             </div>
             <h2 class="font-yellow">Train</h2>
             <p class="mt-3">Baladez vous dans notre train faisant le tour du park. Ideal pour les enfants.</p>
         </div>
         <div class="col-md-4 d-flex flex-column align-items-center mb-4">
             <div class="img-container">
-                <img src="images/zookeeper.png" class="img-fluid" alt="Image 3">
+                <img src="../images/zookeeper.png" class="img-fluid" alt="Image 3">
             </div>
             <h2 class="font-yellow">Guide</h2>
             <p class="mt-3">Decouvrez le parc plus en detail avec nos guides et ayez la possibilite de nourriture les animaux avec eux.</p>
@@ -157,10 +158,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
  
 </footer>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

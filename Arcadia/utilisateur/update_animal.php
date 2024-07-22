@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+include(__DIR__ . '/../config.php');
+
 
 if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $id = intval($_POST['id']);
@@ -30,7 +31,7 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($stmt->execute()) {
-        header("Location: ../arcadia/interface.php");
+        header("Location: form_animal.php");
         exit();
     } else {
         echo "Erreur lors de la mise à jour de l'animal.";

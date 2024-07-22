@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+include(__DIR__ . '/../config.php');
+
 $message="";
 
 if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
@@ -73,7 +74,8 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
             <select class="form-select" id="habitat" name="habitat" required>
                 <?php
                 // Connexion à la base de données
-                include('config.php');
+                include(__DIR__ . '/../config.php');
+
                 $stmt = $bdd->query("SELECT id, nom FROM habitats");
                 while ($row = $stmt->fetch()) {
                     echo "<option value='" . htmlspecialchars_decode($row['id']) . "'>" . htmlspecialchars_decode($row['nom']) . "</option>";

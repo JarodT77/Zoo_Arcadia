@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+include(__DIR__ . '/../config.php');
+
 
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
@@ -21,7 +22,7 @@ if (isset($_GET['id'])) {
 <body>
 <div class="container mt-5">
     <h2>Modifier un Animal</h2>
-    <form action="update.php" method="post" enctype="multipart/form-data">
+    <form action="update_animal.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo htmlspecialchars_decode($animal['id']); ?>">
         <div class="mb-3">
             <label for="prenom" class="form-label">Prénom de l'animal</label>

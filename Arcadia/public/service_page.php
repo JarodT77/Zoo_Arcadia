@@ -1,5 +1,6 @@
 <?php 
-include('../arcadia/utilisateur/config.php');
+include(__DIR__ . '/../config.php');
+
 include('header.html');
 
 //recuperer tous les services 
@@ -17,7 +18,7 @@ $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($services as $service): ?>
             <div class="col">
                 <div class="card" style="background-color: rgba(255, 255, 255, 0.1);">
-                    <img src="../arcadia/utilisateur/upload/<?php echo htmlspecialchars_decode($service['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars_decode($service['nom']); ?>">
+                    <img src="../utilisateur/upload/<?php echo htmlspecialchars_decode($service['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars_decode($service['nom']); ?>">
                     <div class="card-body">
                         <h5 class="card-title text-center font-yellow"><?php echo htmlspecialchars_decode($service['nom']); ?></h5>
                         <p class="card-text text-center" style="color: white;"><?php echo htmlspecialchars_decode($service['discribe']); ?></p>

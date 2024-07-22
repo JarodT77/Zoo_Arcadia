@@ -1,5 +1,6 @@
 <?php
-include('config.php');
+include(__DIR__ . '/../config.php');
+
 
 // Validation de l'avis
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['validate'])) {

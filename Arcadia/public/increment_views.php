@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php'; // Inclure Composer autoload
+require 'C:/xampp/htdocs/Arcadia/vendor/autoload.php'; // Inclure Composer autoload
 
 use MongoDB\Client;
 
